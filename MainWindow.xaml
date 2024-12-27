@@ -1,0 +1,34 @@
+﻿<Window x:Class="FinalMannMehta.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalMannMehta"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#E0F7FA">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="221*"/>
+            <ColumnDefinition Width="179*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Top" Height="400" Background="#B3E5FC">
+           
+            <Button Content="Load Students" Margin="10" Height="30" Click="LoadStudentsButton_Click"/>
+            <Button Content="Clear Data" Margin="10" Height="30" Click="ClearFieldsButton_Click"/>
+            <DataGrid Name="StudentsDataGrid" Margin="10" Height="280" Width="405"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="10,0,10,10" Background="#B3E5FC">
+            
+            <Label Content="Name"/>
+            <TextBox Name="NameTextBox" Margin="10" Height="20"/>
+            <Label Content="Age"/>
+            <TextBox Name="AgeTextBox" Margin="10" Height="20"/>
+            <Label Content="GPA"/>
+            <TextBox Name="GPATextBox" Margin="10" Height="20"/>
+            <Button Content="Add Student" Margin="10" Height="30" Click="AddStudentButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
